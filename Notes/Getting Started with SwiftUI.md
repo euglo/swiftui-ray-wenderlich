@@ -54,14 +54,23 @@
 ![Screen Shot 2021-12-18 at 1.17.53 PM](./Screen Shot 2021-12-18 at 1.17.53 PM.png)
 
 - Text: Displays one or more lines of text
+
 - Slider: Lets user slide a control (thumb) along a straight line track with minimum and maximum
+
 - Button: Performs an action when you tap on it
+
   - Can put any view inside of a button, e.g. text
+
 - Vertical Stack: VStack acts as container for other views (children). Arrange vertically
+
 - Horizontal Stack: HStack acts as container for other views (children). Arrange horizontally
+
 - Learning via repetition
+
 - Understand auto-generated code, don't have to understand what's going on
+
 - SwiftUI Views
+
   - `ContentView.swift`: Using the most for the beginning part of the course - file responsible for what the main screen looks like
   - Resume automatic preview
   - Can update views in the canvas or in the code
@@ -74,3 +83,59 @@
   - Text dynamically resizes depending on dimensions
   - Run actual simulator using Play button
   - Rotate left and right, Cmd+< and Cmd+>
+
+- View Modifiers
+
+  - Modify style of view, e.g. opacity, box shadow, corner radius
+
+  - Behind the scenes, adding a modifier means that SwiftUI creates a new modified version of the view the modifier is applied on
+
+  - ![Screen Shot 2021-12-18 at 2.22.28 PM](/Users/owner/Desktop/Swift/Notes/Screen Shot 2021-12-18 at 2.22.28 PM.png)
+
+  - ``` swift
+    Text("100")
+    	.opacity(0.5)
+    	.border(Color.red, width: 2)
+    ```
+
+    - What will the border look like?
+      - Opaque border, partially transparent
+      - Order matters, switch the modifier order
+
+- Some view modifiers in SwiftUI
+
+  - Kerning, Bold, Font, Line Spacing, Multiline text alignment
+  - Font spacing: iOS has a way to increase or decrease font sizing which is good for accessibility
+    - Apple encourages to use preset font style for title, headlines, captions, etc.
+  - Button to the right of preview on canvas lets you change size set in settings
+  - Help -> developer documentation
+  - `some View`: Any kind of view
+  - `multilineTextAlignment` and `lineSpacing` work on any kind of view
+
+- Objects, Data, and Methods
+
+  - Group related data and functionality into small pieces
+    - e.g. List of dogs - template with name and breed property
+    - Create instances of template (filled in versions)
+    - `class` and `struct`: structs in Swift are powerful so differences are more subtle
+  - App is just a bunch of instances that communicate with each other
+    - Instance of `Button` template inside `ContentView`
+    - Declared struct called `ContentView` and described what its body will look like
+  - `class`/`struct` can have data and functionality
+    - Data: view to display, position, width, height
+    - Functionality: recognize user tap, highlight self, trigger action
+  - Method: provides functionality
+    - `bold()` and `kerning()` were called on `Text` instance
+    - Store data in structs using a property
+    - Two types: **stored property** and **computed property**
+      - Code to run to calculate piece of data
+  - `some`: Can contain the type or something that behaves like the type
+    - Same properties and methods
+    - `body`: Basically a `VStack` with other views inside
+
+- Solving Problem
+
+  - Spelling, case sensitivity, missing closed parenthesis (go to first line of error), missing curly brace (check highlight)
+  - Errors vs. Warning
+    - Errors: fatal, cannot run program until you fix them
+    - Warnings: information telling you what to fix
