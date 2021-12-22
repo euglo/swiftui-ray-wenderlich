@@ -1,0 +1,34 @@
+# SwuiftUI Views and View Modifiers
+
+- More View Modifiers
+  - Padding, foreground color, background, corner radius
+  - Background - can use any View for color
+    - Background color: background color of button
+    - Foreground: color of text
+    - Padding: space around text
+  - Important to apply padding *before* background color
+    - Padding applies transparent space around the view
+- Colors and Gradients
+  - SwiftUI sizes its layout dynamically according to just how much is needed
+    - Initially fill up as much as possible
+  - Safe area by default above
+    - Ignore: `.edgesIgnoringSafeArea(.all)` 
+  - Can either use a custom color or import from Asset Catalog (preferred)
+    - Asset Catalog lets you use one location for everywhere
+      - `AccentColor`: Gives special color to controls (i.e. slider)
+    - Adapts to dark mode if specified
+  - Gradient: use `LinearGradient`
+- Dark Mode
+- Extract Views
+  - Contain views, have pre-styling
+- Fills and Stroke
+  - Drawing shapes
+    - Set to specific height: `.frame()`
+      - Shape is drawn as big as it can be within that space
+    - Specific color: `.fill()`
+  - By default, half of stroke is on the left and other half is on the right of the line
+    - Fix 1: `.inset(by: 10.0)`
+      - Shrinks shape down by specified amount
+    - Fix 2 (specific for border, preferred): `.strokeBorder()`
+  - Providing a border to the button: `.overlay()` with rounded rectable with `strokeBorder()`
+
