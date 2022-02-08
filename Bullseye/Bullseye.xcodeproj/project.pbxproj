@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB11AB8727ADEB570071F309 /* PointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB11AB8627ADEB570071F309 /* PointsView.swift */; };
 		EB1C7BDC277113C800BD130F /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1C7BDB277113C800BD130F /* Game.swift */; };
 		EB1C7BE4277155F900BD130F /* BullseyeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1C7BE3277155F900BD130F /* BullseyeTests.swift */; };
+		EB1FA7AE2775904400DCABEA /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1FA7AD2775904400DCABEA /* BackgroundView.swift */; };
 		EB42A30F27729F1000235B0B /* TextViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB42A30E27729F1000235B0B /* TextViews.swift */; };
 		EB42A3112772AA2900235B0B /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB42A3102772AA2900235B0B /* Shapes.swift */; };
+		EB42A3132772B5E000235B0B /* RoundedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB42A3122772B5E000235B0B /* RoundedViews.swift */; };
 		EB49940A276E88300044CF0E /* BullseyeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB499409276E88300044CF0E /* BullseyeApp.swift */; };
 		EB49940C276E88300044CF0E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB49940B276E88300044CF0E /* ContentView.swift */; };
 		EB49940E276E88320044CF0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB49940D276E88320044CF0E /* Assets.xcassets */; };
@@ -28,11 +31,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EB11AB8627ADEB570071F309 /* PointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsView.swift; sourceTree = "<group>"; };
 		EB1C7BDB277113C800BD130F /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		EB1C7BE1277155F900BD130F /* BullseyeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BullseyeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB1C7BE3277155F900BD130F /* BullseyeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullseyeTests.swift; sourceTree = "<group>"; };
+		EB1FA7AD2775904400DCABEA /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		EB42A30E27729F1000235B0B /* TextViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViews.swift; sourceTree = "<group>"; };
 		EB42A3102772AA2900235B0B /* Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
+		EB42A3122772B5E000235B0B /* RoundedViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedViews.swift; sourceTree = "<group>"; };
 		EB499406276E88300044CF0E /* Bullseye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bullseye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB499409276E88300044CF0E /* BullseyeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullseyeApp.swift; sourceTree = "<group>"; };
 		EB49940B276E88300044CF0E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,6 +78,9 @@
 				EB49940B276E88300044CF0E /* ContentView.swift */,
 				EB42A30E27729F1000235B0B /* TextViews.swift */,
 				EB42A3102772AA2900235B0B /* Shapes.swift */,
+				EB42A3122772B5E000235B0B /* RoundedViews.swift */,
+				EB1FA7AD2775904400DCABEA /* BackgroundView.swift */,
+				EB11AB8627ADEB570071F309 /* PointsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -238,8 +247,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB42A3132772B5E000235B0B /* RoundedViews.swift in Sources */,
 				EB49940C276E88300044CF0E /* ContentView.swift in Sources */,
 				EB42A30F27729F1000235B0B /* TextViews.swift in Sources */,
+				EB11AB8727ADEB570071F309 /* PointsView.swift in Sources */,
+				EB1FA7AE2775904400DCABEA /* BackgroundView.swift in Sources */,
 				EB42A3112772AA2900235B0B /* Shapes.swift in Sources */,
 				EB1C7BDC277113C800BD130F /* Game.swift in Sources */,
 				EB49940A276E88300044CF0E /* BullseyeApp.swift in Sources */,

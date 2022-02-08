@@ -14,12 +14,21 @@ struct ContentView: View {
   
   var body: some View {
     ZStack {
-      Color("BackgroundColor")
-        .edgesIgnoringSafeArea(.all)
+      BackgroundView(game: $game)
       VStack {
         InstructionsView(game: $game)
+          .padding(.bottom, alertIsVisible ? 0 : 100)
+        if alertIsVisible {
+          PointsView(alertIsVisible: $alertIsVisible, sliderValue: $sliderValue, game: $game)
+            .transition(.scale)
+        } else {
+          HitMeButton(alertIsVisible: $alertIsVisible, sliderValue: $sliderValue, game: $game)
+            .transition(.scale)
+        }
+      }
+      if !alertIsVisible {
         SliderView(sliderValue: $sliderValue)
-        HitMeButton(alertIsVisible: $alertIsVisible, sliderValue: $sliderValue, game: $game)
+          .transition(.scale)
       }
     }
   }
@@ -59,8 +68,9 @@ struct HitMeButton: View {
   
   var body: some View {
     Button(action: {
-      print("Hello, SwiftUI!")
-      alertIsVisible = true
+      withAnimation {
+        alertIsVisible = true
+      }
     }) {
       Text("Hit me".uppercased())
         .bold()
@@ -79,12 +89,13 @@ struct HitMeButton: View {
       RoundedRectangle(cornerRadius: 21.0)
         .strokeBorder(Color.white, lineWidth: 2.0)
     )
-    .alert(isPresented: $alertIsVisible, content: {
-      let roundedValue = Int(sliderValue.rounded())
-      return Alert(title: Text("Hello there!"),
-                   message: Text("The slider's value is \(roundedValue).\n" + "You scored \(game.points(sliderValue: roundedValue)) points this round."),
-                   dismissButton: .default(Text("Awesome!")))
-    })
+//    .alert(isPresented: $alertIsVisible, content: {
+//      let roundedValue = Int(sliderValue.rounded())
+//      let points = game.points(sliderValue: roundedValue)
+//      return Alert(title: Text("Hello there!"), message: Text("The slider's value is \(roundedValue).\n" + "You scored \(points) points this round."), dismissButton: .default(Text("Awesome!")) {
+//        game.startNewRound(points: points)
+//      })
+//    })
   }
 }
 

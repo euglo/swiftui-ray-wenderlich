@@ -40,6 +40,47 @@ struct SliderLabelText: View {
     Text(text)
       .bold()
       .foregroundColor(Color("TextColor"))
+      .frame(width: 35.0)
+  }
+}
+
+struct LabelText: View {
+  var text: String
+  
+  var body: some View {
+    Text(text.uppercased())
+      .bold()
+      .foregroundColor(Color("TextColor"))
+      .kerning(1.5)
+      .font(.caption)
+  }
+}
+
+struct BodyText: View {
+  var text: String
+  
+  var body: some View {
+    Text(text)
+      .font(.subheadline)
+      .fontWeight(.semibold)
+      .multilineTextAlignment(.center)
+      .lineSpacing(12.0)
+  }
+}
+
+struct ButtonText: View {
+  var text: String
+  
+  var body: some View {
+    Text(text)
+      .bold()
+      .padding()
+      .frame(maxWidth: .infinity)
+      .background(
+        Color("AccentColor")
+      )
+      .foregroundColor(.white)
+      .cornerRadius(12.0)
   }
 }
 
@@ -49,6 +90,10 @@ struct TextViews_Previews: PreviewProvider {
       InstructionText(text: "Instructions")
       BigNumberText(text: "999")
       SliderLabelText(text: "99")
+      LabelText(text: "Score")
+      BodyText(text: "You scored 200 Points\n🎉🎉🎉")
+      ButtonText(text: "Start New Round")
     }
+    .padding()
   }
 }
